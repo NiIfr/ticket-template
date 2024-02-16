@@ -1,0 +1,114 @@
+@import url("./fonts.css");
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html{
+  font-size: 62.5%;
+}
+body{
+  font-size: 1.6rem;
+  font-family: Vazirmatn;
+}
+:root{
+  --color-primary-text:#1e1e1e;
+  --color-secondary-text:#696969;
+  --color-primary-btn:#219F95;
+  --color-link:#234894;
+  --color-link-background:#AFCEDD;
+  --color-white:#fff;
+
+  --border-radius: 5px;
+}
+
+a{
+  text-decoration: none;
+}
+
+.ticket {
+  padding: 5rem;
+}
+.ticket .head-ticket {
+  margin-bottom: 2rem;
+}
+.body-ticket{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  row-gap: 5rem;
+  column-gap: 8rem;
+}
+
+.body-ticket .ticket-item {
+  display: flex;
+  flex-direction: column;
+  row-gap: .5rem;
+}
+.body-ticket .ticket-item .ticket-info {
+  display: flex;
+  justify-content: space-between;
+}
+.body-ticket .ticket-item .ticket-info .docs a{ 
+  color: var(--color-link);
+  font-weight: 600;
+  
+}
+
+.body-ticket .ticket-item .ticket-info .docs .docs-num{
+  color: var(--color-link);
+  background-color: var(--color-link-background);
+  padding: .2rem 1rem;
+  border-radius: var(--border-radius);
+}
+.body-ticket .ticket-item .ticket-info .date{
+  font-size: 1.2rem;
+  color: var(--color-secondary-text);
+}
+.body-ticket .ticket-item .ticket-title{
+  font-size: 18px;
+  font-weight: 900;
+}
+.body-ticket .ticket-item .ticket-num{
+  font-size: 1.2rem;
+  color: var(--color-secondary-text);
+}
+.body-ticket .ticket-item .body-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.body-ticket .ticket-item .body-item .user-info {
+  display: flex;
+  align-items: center;
+  gap:1rem;
+}
+.body-ticket .ticket-item .body-item .user-info img {
+  height: 40px;
+  width: 40px;
+  border-radius: var(--border-radius);
+}
+.body-ticket .ticket-item .body-item .user-info .user-name {
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+.body-ticket .ticket-item .body-item a{
+  color: var(--color-white);
+  background-color: var(--color-primary-btn);
+  padding: 1rem;
+  border-radius: var(--border-radius);
+
+}
+
+@media screen and (max-width:1280px){
+  .body-ticket{    
+    grid-template-columns: 1fr 1fr ;
+    grid-template-rows: 1fr 1fr 1fr ;   
+  }
+}
+@media screen and (max-width:600px){
+  .body-ticket{
+    grid-template-columns: 1fr ;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr; 
+  }
+}
